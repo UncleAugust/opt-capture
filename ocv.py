@@ -7,12 +7,13 @@
 #detector = VideoObjectDetection()
 #detector.setModelTypeAsYOLOv3()
 #detector.setModelPath( os.path.join(execution_path , "C:\\Users\\Admin_Robo\\Desktop\\yolo.h5"))
-#detector.loadModel()
+#detector.loadModel(detection_speed='faster')
 
-#video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join( execution_path, "C:\\Users\\Admin_Robo\\Desktop\\20190830_151839.mp4"),
-#                                output_file_path=os.path.join(execution_path, "traffic_mini_detected_1")
-#                                , frames_per_second=1, log_progress=True)
+#video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join( execution_path, "C:\\Users\\Admin_Robo\\Desktop\\WIN_20190912_17_36_23_Pro.mp4"),
+    #                            output_file_path=os.path.join(execution_path, "C:\\Users\\Admin_Robo\\Desktop\\esp_test")
+    #                            , frames_per_second=29, log_progress=True)
 #print(video_path)
+
 from imageai.Detection import ObjectDetection
 import os
 
@@ -25,7 +26,7 @@ detector.loadModel(detection_speed='faster') ## NOTE: 1 секунда, 5 объ
 print('LOADED')
 print('LOADED2')
 
-detections = detector.detectObjectsFromImage(input_image=os.path.join(execution_path , "C:\\Users\\Admin_Robo\\Desktop\\img1.jpg"), output_image_path=os.path.join(execution_path , "C:\\Users\\Admin_Robo\\Desktop\\iimg1.jpg"))
+detections = detector.detectObjectsFromImage(input_image=os.path.join(execution_path , "C:\\Users\\Admin_Robo\\Desktop\\WIN_20190919_18_18_19_Pro.jpg"), output_image_path=os.path.join(execution_path , "C:\\Users\\Admin_Robo\\Desktop\\iimg666.jpg"))
 
 print('=================================IMG 1=================================')
 for eachObject in detections:
